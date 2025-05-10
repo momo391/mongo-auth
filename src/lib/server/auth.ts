@@ -1,6 +1,6 @@
 import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
-import { db } from "$lib/server/db";
+import { getDb } from "$lib/server/mongo";
 import { env } from "$env/dynamic/private";
 
 const auth = betterAuth({
@@ -9,7 +9,7 @@ const auth = betterAuth({
     autoSignIn: false,
     requireEmailVerification: true,
   },
-  database: mongodbAdapter(db),
+  database: mongodbAdapter(await getDb()),
   baseURL: env.BETTER_AUTH_URL,
   secret: env.BETTER_AUTH_SECRET,
 });
