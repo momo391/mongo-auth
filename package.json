@@ -26,6 +26,8 @@
 	},
 	"dependencies": {
 		"better-auth": "^1.2.7",
-		"mongodb": "^6.16.0"
+		"mongodb": "^6.16.0",
+		"winston": "^3.17.0",
+		"winston-transport": "^4.9.0"
 	}
 }
