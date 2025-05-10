@@ -6,8 +6,7 @@ import { env } from "$env/dynamic/private";
 const auth = betterAuth({
   emailAndPassword: {
     enabled: true,
-    autoSignIn: false,
-    requireEmailVerification: true,
+    autoSignIn: true,
   },
   database: mongodbAdapter(await getDb()),
   baseURL: env.BETTER_AUTH_URL,
