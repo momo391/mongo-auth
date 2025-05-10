@@ -1,6 +1,6 @@
 // src/lib/server/mongo.ts
 import { env } from "$env/dynamic/private";
-import { MongoClient, type MongoClientOptions } from "mongodb";
+import { MongoClient } from "mongodb";
 
 const uri = env.MONGODB_URI!;
 
